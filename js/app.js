@@ -6,17 +6,19 @@ let imageFive ="url(/images/img-5.jpg)"
 
 let images = [
     `${imageOne}`,
-    `{imageTwo}`,
+    `${imageTwo}`,
     `${imageThree}`,
     `${imageFour}`,
     `${imageFive}`
 ]
 
 let  setImage = document.querySelector(".frame").style.backgroundImage = `${imageOne}`
-
 let right = document.querySelector(".right")
 let left = document.querySelector(".left")
 
+
+/*
+    //////////////////FOR USING BUTTONS//////////////////////
 
 
 right.addEventListener('click', function(e){
@@ -52,3 +54,28 @@ left.addEventListener('click', function(goLeft){
         setImage = document.querySelector(".frame").style.backgroundImage = `${imageFour}`
     }
 })
+*/
+
+
+
+
+/*
+///////////////FOR AUTO SLIDES//////////////////
+
+imageCount = 0
+function imageSlide () {
+
+    left.style.display = "none";
+    right.style.display = "none";
+
+    setImage = document.querySelector(".frame").style.backgroundImage = images[imageCount]
+    imageCount ++;
+
+    if ( imageCount >= images.length) {
+        imageCount = 0;
+    }
+
+    console.log(imageCount);
+}
+setInterval(imageSlide, 3000);
+*/
