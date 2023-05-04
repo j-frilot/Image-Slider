@@ -1,81 +1,19 @@
-let imageOne = "url(/images/img-1.jpg)"
-let imageTwo = "url(/images/img-2.jpg)"
-let imageThree = "url(/images/img-3.jpg)"
-let imageFour = "url(/images/img-4.jpg)"
-let imageFive ="url(/images/img-5.jpg)"
+const imageData = [
+	'url(./images/img-1.jpg)',
+	'url(./images/img-2.jpg)',
+	'url(./images/img-3.jpg)',
+	'url(./images/img-4.jpg)',
+	'url(./images/img-5.jpg)',
+];
 
-let images = [
-    `${imageOne}`,
-    `${imageTwo}`,
-    `${imageThree}`,
-    `${imageFour}`,
-    `${imageFive}`
-]
+let imageCount = 1;
 
-let  setImage = document.querySelector(".frame").style.backgroundImage = `${imageOne}`
-let right = document.querySelector(".right")
-let left = document.querySelector(".left")
+function imageSlide() {
+	const displayImage = (document.querySelector(
+		'.frame'
+	).style.backgroundImage = imageData[imageCount]);
 
-
-/*
-    //////////////////FOR USING BUTTONS//////////////////////
-
-
-right.addEventListener('click', function(e){
-    console.log("***goRight***")
-    
-    if (setImage == `${imageOne}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageTwo}`
-    } else if (setImage == `${imageTwo}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageThree}`
-    } else if (setImage == `${imageThree}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageFour}`
-    } else if (setImage == `${imageFour}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageFive}`
-    } else if (setImage == `${imageFive}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageOne}`
-    }
-    
-})
-
-
-left.addEventListener('click', function(goLeft){
-    console.log("***goLeft***")
-
-    if (setImage == `${imageOne}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageFive}`
-    } else if (setImage == `${imageTwo}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageOne}`
-    } else if (setImage == `${imageThree}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageTwo}`
-    } else if (setImage == `${imageFour}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageThree}`
-    } else if (setImage == `${imageFive}`) {
-        setImage = document.querySelector(".frame").style.backgroundImage = `${imageFour}`
-    }
-})
-*/
-
-
-
-
-/*
-///////////////FOR AUTO SLIDES//////////////////
-
-imageCount = 0
-function imageSlide () {
-
-    left.style.display = "none";
-    right.style.display = "none";
-
-    setImage = document.querySelector(".frame").style.backgroundImage = images[imageCount]
-    imageCount ++;
-
-    if ( imageCount >= images.length) {
-        imageCount = 0;
-    }
-
-    console.log(imageCount);
+	imageCount >= imageData.length ? (imageCount = 0) : imageCount++;
 }
-setInterval(imageSlide, 3000);
-*/
+
+setInterval(imageSlide, 2000);

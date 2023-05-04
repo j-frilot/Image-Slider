@@ -1,33 +1,20 @@
-
-    body{
-        background: #666;
-        font-size: 24px;
-        margin: 0;
-        padding: 0;
-    }
-    .frame{
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 15px;
-        border:#333 10px solid;
-        height: 100vh;
-        width:75%;
-        margin:auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .btn{
-        background: #666;
-        border-radius: 10px;
-        padding: 10px 15px;
-        cursor: pointer;
-        border: none;
-        outline: none;
-    }
-
-    .fas{
-        font-size: 40px;
-    }
+body {
+	background: #e23434;
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+}
+.frame {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../images/img-1.jpg');
+	border-radius: 10px;
+	border: #c5c21c 5px solid;
+	height: 75vh;
+	width: 75%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
